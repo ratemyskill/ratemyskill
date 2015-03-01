@@ -11,7 +11,6 @@ val mainLibraryDependencies = Seq(
 )
 
 val testLibraryDependencies = Seq(
-  "org.pegdown" % "pegdown" % "1.4.2" % "test,it",
   "org.scalatest" %% "scalatest" % "2.2.1" % "test,it"
 )
 
