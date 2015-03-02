@@ -26,3 +26,7 @@ import CoverallsPlugin.CoverallsKeys._
 
 // Create env var 'COVERALLS_REPO_TOKEN' on ~/.profile locally.
 coverallsToken := sys.env.get("COVERALLS_REPO_TOKEN")
+
+ScoverageSbtPlugin.ScoverageKeys.coverageMinimum := 80
+
+ScoverageSbtPlugin.ScoverageKeys.coverageFailOnMinimum := true
