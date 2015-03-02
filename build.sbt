@@ -20,3 +20,9 @@ libraryDependencies ++= (mainLibraryDependencies ++ testLibraryDependencies)
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-Xfatal-warnings")
 
 testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/test-reports")
+
+// SBT Coveralls plugin related settings. Instructions at : https://github.com/scoverage/sbt-coveralls
+import CoverallsPlugin.CoverallsKeys._
+
+// Create env var 'COVERALLS_REPO_TOKEN' on ~/.profile locally.
+coverallsToken := sys.env.get("COVERALLS_REPO_TOKEN")
